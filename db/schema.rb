@@ -11,17 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 4) do
+ActiveRecord::Schema.define(version: 3) do
 
   create_table "artists", force: :cascade do |t|
     t.string  "name"
     t.integer "year_completed"
     t.integer "figure_id"
-  end
-
-  create_table "figure_titles", force: :cascade do |t|
-    t.integer "figure_id"
-    t.integer "title_id"
   end
 
   create_table "figures", force: :cascade do |t|
