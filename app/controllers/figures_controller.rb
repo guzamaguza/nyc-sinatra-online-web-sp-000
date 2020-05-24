@@ -33,12 +33,12 @@ class FiguresController < ApplicationController
 
     # if there is a new title, add it to titles & figure
     if !params[:title][:name].empty?
-      @figure.titles << Title.create(params[:title])     
+      @figure.titles << Title.create(params[:title])
     end
 
     # if there is a new landmark/year, add it to landmarks & figure
     if !params[:landmark][:name].empty?
-      @figure.landmarks << Landmark.create(params[:landmark])      
+      @figure.landmarks << Landmark.create(params[:landmark])
     end
 
     # save to database!
@@ -50,7 +50,7 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     # Find figure by id
     @figure = Figure.find(params[:id])
-   
+
     # Update figure
     @figure.update(params[:figure])
 
